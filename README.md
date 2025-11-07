@@ -99,3 +99,25 @@ Endpoint	                                Method	Description
         API Layer → Django REST Framework → JSON Endpoints
         
         Frontend → JavaScript/Chart.js → Interactive Visualizations
+
+>> Dashboard Features
+
+      > Interactive Elements
+            Company Selection: Click any company in sidebar to view data
+            
+            Price Charts: Interactive line charts showing 30-day price history
+            
+            Performance Metrics: Daily returns visualization with color coding
+            
+            Comparison Tools: Multi-stock comparison with side-by-side analysis
+            
+            Search Functionality: Filter companies by name or symbol
+      
+      > Visual Components
+            Price History Chart: Line chart showing closing prices
+            
+            Daily Returns Chart: Bar chart with color-coded positive/negative returns
+            
+            Key Metrics Display: 52-week high/low, average price, volatility
+            
+            Comparison Charts: Multi-dataset bar charts for stock comparison
