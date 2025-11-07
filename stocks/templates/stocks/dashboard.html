@@ -1,0 +1,88 @@
+{% extends 'stocks/base.html' %}
+
+{% block content %}
+<!-- Dashboard Header -->
+<div class="row mb-4">
+    <div class="col-12">
+        <h2>Stock Market Dashboard</h2>
+        <p class="text-muted">Real-time stock data and analysis</p>
+    </div>
+</div>
+
+<!-- Selected Company Info -->
+<div class="row mb-4" id="companyInfo" style="display: none;">
+    <div class="col-12">
+        <div class="card">
+            <div class="card-body">
+                <div class="row">
+                    <div class="col-md-6">
+                        <h4 id="companyName">Company Name</h4>
+                        <p id="companySymbol" class="text-muted">SYMBOL</p>
+                    </div>
+                    <div class="col-md-6 text-end">
+                        <h3 id="currentPrice" class="text-success">$0.00</h3>
+                        <p id="priceChange" class="text-muted">+0.00% Today</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Charts Section -->
+<div class="row">
+    <div class="col-lg-8">
+        <div class="card mb-4">
+            <div class="card-header">
+                <h5>Price History</h5>
+            </div>
+            <div class="card-body">
+                <canvas id="priceChart" height="300"></canvas>
+            </div>
+        </div>
+    </div>
+    
+    <div class="col-lg-4">
+        <div class="card mb-4">
+            <div class="card-header">
+                <h5>Key Metrics</h5>
+            </div>
+            <div class="card-body" id="keyMetrics">
+                <!-- Metrics will be loaded here -->
+            </div>
+        </div>
+        
+        <div class="card mb-4">
+            <div class="card-header">
+                <h5>Daily Performance</h5>
+            </div>
+            <div class="card-body">
+                <canvas id="performanceChart" height="200"></canvas>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Comparison Section -->
+<div class="row mt-4">
+    <div class="col-12">
+        <div class="card">
+            <div class="card-header d-flex justify-content-between align-items-center">
+                <h5>Compare Stocks</h5>
+                <div>
+                    <select id="compareSelect1" class="form-select form-select-sm d-inline-block w-auto">
+                        <option value="">Select first stock</option>
+                    </select>
+                    <select id="compareSelect2" class="form-select form-select-sm d-inline-block w-auto mx-2">
+                        <option value="">Select second stock</option>
+                    </select>
+                    <button id="compareBtn" class="btn btn-primary btn-sm">Compare</button>
+                </div>
+            </div>
+            <div class="card-body">
+                <canvas id="comparisonChart" height="200"></canvas>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
